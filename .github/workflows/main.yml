@@ -5,14 +5,13 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2.3.2
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftp.outlawsstudio.my.id
-        username: laravel@outlawsstudio.my.id
-        password: lh9[Ta%!ziVf
-        
-        
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.3.2
+      - name: Install Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftp.outlawsstudio.my.id
+          username: laravel@outlawsstudio.my.id
+          password: lh9[Ta%!ziVf
