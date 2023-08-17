@@ -37,7 +37,7 @@ jobs:
       - name: Create Database
         run: |
         mkdir -p database 
-        touch database/database.sql
+        touch database/database.mysql
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
