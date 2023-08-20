@@ -13,13 +13,13 @@ jobs:
 
       - name: Copy .env;
         run: |
-        php -r "file_exists('.env') || copy('.env.example','.env');   
-        echo "DB_CONNECTION=mysql" >> .env
-        echo "DB_HOST=127.0.0.1" >> .env
-        echo "DB_PORT=8889" >> .env
-        echo "DB_DATABASE=cicd-tes" >> .env
-        echo "DB_USERNAME=root" >> .env
-        echo "DB_PASSWORD=root" >> .env
+          cp .env.example .env
+          sed -i '' 's/^DB_CONNECTION=.*/DB_CONNECTION=mysql/g' .env
+          sed -i '' 's/^DB_HOST=.*/DB_HOST=127.0.0.1/g' .env
+          sed -i '' 's/^DB_PORT=.*/DB_PORT=3306/g' .env
+          sed -i '' 's/^DB_DATABASE=.*/DB_DATABASE=outj9927_cicdtes/g' .env
+          sed -i '' 's/^DB_USERNAME=.*/DB_USERNAME=outj9927_fahmi/g' .env
+          sed -i '' 's/^DB_PASSWORD=.*/DB_PASSWORD=x0C.[ic*T%-M/g' .env
 
       # - name: Config Clearing;
       #   run: php artisan config:clear
