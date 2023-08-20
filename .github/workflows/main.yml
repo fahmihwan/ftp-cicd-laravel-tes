@@ -14,14 +14,17 @@ jobs:
       - name: Copy .env.example to .env
         run: cp .env.example .env
 
-      - name: Update .env values
-        run: |
-          sed -i "s/DB_CONNECTION=mysql/DB_CONNECTION=mysql/g" .env
-          sed -i "s/DB_HOST=127.0.0.1/DB_HOST=127.0.0.1/g" .env
-          sed -i "s/DB_PORT=3306/DB_PORT=3306/g" .env
-          sed -i "s/DB_DATABASE=laravel/DB_DATABASE=outj9927_cicdtes/g" .env
-          sed -i "s/DB_USERNAME=root/DB_USERNAME=outj9927_fahmi/g" .env
-          sed -i "s/DB_PASSWORD=/DB_PASSWORD=x0C.[ic*T%-M/g" .env
+      # - name: Update .env values
+      #   run: |
+      #     sed -i "s/DB_CONNECTION=mysql/DB_CONNECTION=mysql/g" .env
+      #     sed -i "s/DB_HOST=127.0.0.1/DB_HOST=127.0.0.1/g" .env
+      #     sed -i "s/DB_PORT=3306/DB_PORT=3306/g" .env
+      #     sed -i "s/DB_DATABASE=laravel/DB_DATABASE=outj9927_cicdtes/g" .env
+      #     sed -i "s/DB_USERNAME=root/DB_USERNAME=outj9927_fahmi/g" .env
+      #     sed -i "s/DB_PASSWORD=/DB_PASSWORD=x0C.[ic*T%-M/g" .env
+
+      - name: Copy Laravel to ../
+        run: cp -r laravel ../laravel
 
       # - name: Config Clearing;
       #   run: php artisan config:clear
@@ -54,4 +57,6 @@ jobs:
           server: ftp.outlawsstudio.my.id
           username: laravel@outlawsstudio.my.id
           password: lh9[Ta%!ziVf
-          server-dir: ./../laravel/
+          # server-dir: ./../laravel/
+
+          # 1. creaet server-dir dulu
