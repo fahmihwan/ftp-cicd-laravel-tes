@@ -22,6 +22,7 @@ jobs:
           sed -i "s/DB_DATABASE=laravel/DB_DATABASE=outj9927_cicdtes/g" .env
           sed -i "s/DB_USERNAME=root/DB_USERNAME=outj9927_fahmi/g" .env
           sed -i "s/DB_PASSWORD=/DB_PASSWORD=x0C.[ic*T%-M/g" .env
+
       # - name: Config Clearing;
       #   run: php artisan config:clear
 
