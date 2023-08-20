@@ -53,3 +53,4 @@ jobs:
           server: ftp.outlawsstudio.my.id
           username: laravel@outlawsstudio.my.id
           password: lh9[Ta%!ziVf
+          server-dir: /laravel
