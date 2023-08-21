@@ -24,7 +24,7 @@ jobs:
       #     sed -i "s/DB_PASSWORD=/DB_PASSWORD=x0C.[ic*T%-M/g" .env
 
       - name: Copy Laravel to ../
-        run: cp -r laravel ../laravel
+        run: cp -r ./laravel ../laravel
 
       # - name: Config Clearing;
       #   run: php artisan config:clear
@@ -57,6 +57,6 @@ jobs:
           server: ftp.outlawsstudio.my.id
           username: laravel@outlawsstudio.my.id
           password: lh9[Ta%!ziVf
-          # server-dir: ./../laravel/
+          server-dir: ./../
 
           # 1. creaet server-dir dulu
