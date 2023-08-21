@@ -23,9 +23,6 @@ jobs:
       #     sed -i "s/DB_USERNAME=root/DB_USERNAME=outj9927_fahmi/g" .env
       #     sed -i "s/DB_PASSWORD=/DB_PASSWORD=x0C.[ic*T%-M/g" .env
 
-      - name: Copy Laravel to ../
-        run: cp -r ./laravel ../laravel
-
       # - name: Config Clearing;
       #   run: php artisan config:clear
 
